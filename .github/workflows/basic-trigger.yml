@@ -1,0 +1,15 @@
+name: Basic HTML trigger
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.html'
+
+jobs:
+  test-html:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report successful HTML push
+        run: echo "HTML file was pushed successfully"
